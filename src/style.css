@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --color-vrt-navy: #0B1120;
+  --color-vrt-gold: #C5A059;
+  --color-vrt-brown: #2C1E16;
+  --color-vrt-white: #F9F9F9;
+  
+  --font-abhaya: "Abhaya Libre", serif;
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+@font-face {
+  font-family: 'Abhaya Libre';
+  src: url('/fonts/AbhayaLibre-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Abhaya Libre';
+  src: url('/fonts/AbhayaLibre-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Abhaya Libre';
+  src: url('/fonts/AbhayaLibre-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Abhaya Libre';
+  src: url('/fonts/AbhayaLibre-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Abhaya Libre';
+  src: url('/fonts/AbhayaLibre-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+body {
+  @apply bg-vrt-navy text-vrt-white font-montserrat antialiased selection:bg-vrt-gold selection:text-vrt-navy;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-abhaya;
+}
+
+/* Utils para glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-dark {
+  background: rgba(11, 17, 32, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+/* Global Reveal Animations System */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-delay-100 { transition-delay: 100ms; }
+.reveal-delay-200 { transition-delay: 200ms; }
+.reveal-delay-300 { transition-delay: 300ms; }
+.reveal-delay-400 { transition-delay: 400ms; }
+.reveal-delay-500 { transition-delay: 500ms; }
