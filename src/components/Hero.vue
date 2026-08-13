@@ -24,22 +24,20 @@
       </div>
       
       <!-- Headline -->
-      <h1 class="text-4xl md:text-6xl lg:text-[5rem] font-abhaya font-bold text-white leading-[1.1] mb-8 tracking-tight flex flex-col items-center w-full transition-all duration-1000 reveal-delay-200" :class="isVisible ? 'reveal-visible' : 'reveal-hidden'">
-        <span class="text-2xl md:text-3xl lg:text-4xl text-gray-300 font-medium tracking-normal mb-2 opacity-90">Transforme Sua Presença Online e Seja</span>
+      <h1 class="text-4xl md:text-6xl lg:text-[4.5rem] font-abhaya font-bold text-white leading-[1.1] mb-8 tracking-tight flex flex-col items-center w-full transition-all duration-1000 reveal-delay-200" :class="isVisible ? 'reveal-visible' : 'reveal-hidden'">
+        <span class="text-2xl md:text-3xl lg:text-4xl text-gray-300 font-medium tracking-normal mb-2 opacity-90">Bio que Vende: A Transformação Imediata para se Tornar uma</span>
         
         <span class="relative inline-block my-2">
           <span class="relative z-10 text-transparent bg-clip-text bg-gradient-to-b from-[#F2D492] via-[#C5A059] to-[#8C6D33] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] pb-2">
-            Reconhecido Como um<br class="hidden md:block" /> Verdadeiro Especialista
+            Autoridade Digital<br class="hidden md:block" /> Reconhecida!
           </span>
           <span class="absolute inset-0 z-0 bg-vrt-gold blur-[40px] opacity-20"></span>
         </span>
-        
-        <span class="text-3xl md:text-4xl lg:text-5xl italic font-light mt-2 text-white/90">em Apenas 5 Dias!</span>
       </h1>
       
       <!-- Subheadline -->
       <p class="text-lg md:text-xl text-gray-400 font-montserrat max-w-2xl mx-auto mb-16 font-light leading-relaxed transition-all duration-1000 reveal-delay-300" :class="isVisible ? 'reveal-visible' : 'reveal-hidden'">
-        Descubra Como Um Serviço de Link Pages Profissionais Pode <strong class="text-white font-medium">Impulsionar Sua Carreira</strong> e Deixar Seus Concorrentes Comendo Poeira!
+        Você Está Prestes a Revolucionar Sua Presença Online e Alcançar o <strong class="text-white font-medium">Reconhecimento Que Sempre Mereceu!</strong>
       </p>
 
       <!-- Video Slot Wrapper -->

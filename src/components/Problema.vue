@@ -7,12 +7,12 @@
         class="text-4xl md:text-5xl lg:text-6xl font-abhaya font-bold text-center mb-24 leading-tight text-white drop-shadow-xl max-w-4xl mx-auto transition-all duration-1000"
         :class="isVisible ? 'reveal-visible' : 'reveal-hidden'"
       >
-        Você já se sentiu 
+        A Dor da 
         <span class="relative inline-block mx-2">
-          <span class="relative z-10 text-gray-600 line-through decoration-red-600/80 decoration-[3px] md:decoration-[5px]">invisível</span>
+          <span class="relative z-10 text-gray-600 line-through decoration-red-600/80 decoration-[3px] md:decoration-[5px]">Invisibilidade</span>
           <span class="absolute inset-0 bg-red-600/10 blur-lg"></span>
         </span> 
-        em um mar de profissionais talentosos, mas <span class="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-white">não reconhecidos?</span>
+        <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-white text-3xl md:text-4xl">O Que Você Está Perdendo?</span>
       </h2>
       
       <!-- Container que constrói o efeito Glass dinamicamente no Scroll -->
@@ -42,25 +42,65 @@
           <div class="md:col-span-5 relative">
             <div class="absolute -top-16 -left-8 text-[150px] text-vrt-gold opacity-[0.15] font-serif leading-none select-none">“</div>
             <h3 class="text-3xl lg:text-4xl font-abhaya font-bold text-white leading-snug relative z-10 pt-4">
-              Fica acordado à noite, atormentado pela dúvida: <br/><br/>
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-vrt-gold to-yellow-600">“E se todo o meu esforço não valer a pena?”</span>
+              A frustração de ser <br/><br/>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-vrt-gold to-yellow-600">invisível para o mercado.</span>
             </h3>
           </div>
           
           <!-- Lado Direito: Narrativa -->
-          <div class="md:col-span-7 space-y-8 text-lg md:text-xl text-gray-300 font-montserrat font-light leading-relaxed md:border-l border-gray-800 md:pl-10">
+          <div class="md:col-span-7 space-y-6 text-lg md:text-xl text-gray-300 font-montserrat font-light leading-relaxed md:border-l border-gray-800 md:pl-10">
             <p>
-              <strong class="text-white font-medium tracking-wide">Imagine a cena:</strong> você, um verdadeiro guerreiro solitário, lutando dia após dia para provar seu valor. Você investiu tempo, esforço e dinheiro em cursos, tutoriais e fórmulas mágicas, mas, no fundo, ainda se sente como um impostor.
+              <strong class="text-white font-medium tracking-wide">Se você está aqui:</strong> provavelmente já se sentiu como um guerreiro solitário, lutando contra um mercado que não reconhece seu verdadeiro valor.
             </p>
             
             <p class="opacity-90">
-              Você não está sozinho. Milhares de profissionais como você passam por isso, tentando encontrar um espaço neste mercado saturado, onde as soluções rápidas e superficiais parecem reinar. 
+              Você investiu tempo e dinheiro em estratégias que prometiam resultados milagrosos, mas no final, o que você obteve?
             </p>
             
-            <div class="pt-6 mt-6 border-t border-gray-800/50">
-              <p class="text-white font-semibold text-xl bg-vrt-gold/10 inline-block px-4 py-2 rounded-lg border border-vrt-gold/20">
-                Os “gurus” do marketing vendem ilusões, enquanto você, com suas habilidades técnicas e conhecimento profundo, fica à mercê da frustração.
-              </p>
+            <!-- Enquete Interativa (Caixinha de Seleção) -->
+            <div class="bg-gradient-to-br from-[#1a1025] to-[#0A1128] rounded-3xl p-6 md:p-8 border border-purple-500/30 shadow-2xl relative overflow-hidden mt-8 transition-all duration-500" :class="{ 'ring-2 ring-vrt-gold ring-offset-2 ring-offset-[#0A1128]': pollAnswered }">
+              <div class="absolute -top-10 -right-10 w-32 h-32 bg-purple-500/20 blur-2xl rounded-full"></div>
+              
+              <h4 class="text-white font-bold text-lg md:text-xl mb-6 flex items-center gap-3">
+                <span class="w-10 h-10 shrink-0 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[2px]">
+                  <span class="w-full h-full bg-[#0A1128] rounded-full flex items-center justify-center">
+                    <img src="/images/Dourado-4.png" class="w-5 h-5 opacity-80" />
+                  </span>
+                </span>
+                Você sente que perde vendas por não passar a confiança necessária no primeiro clique?
+              </h4>
+              
+              <!-- Opções -->
+              <div class="space-y-3" v-if="!pollAnswered">
+                <button @click="answerPoll(true)" class="w-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 flex justify-between items-center group">
+                  Sim, com certeza
+                  <span class="w-5 h-5 rounded-full border border-gray-400 group-hover:border-white"></span>
+                </button>
+                <button @click="answerPoll(false)" class="w-full bg-white/5 hover:bg-white/10 border border-transparent text-gray-400 hover:text-white py-3 px-6 rounded-xl transition-all duration-300 flex justify-between items-center group">
+                  Não sofro com isso
+                  <span class="w-5 h-5 rounded-full border border-gray-600 group-hover:border-gray-400"></span>
+                </button>
+              </div>
+              
+              <!-- Resultados da Enquete -->
+              <div class="space-y-4" v-else>
+                <div class="relative w-full bg-black/40 rounded-xl overflow-hidden h-12 flex items-center px-4 border border-vrt-gold/30">
+                  <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-vrt-gold to-yellow-600 w-[94%] transition-all duration-1000"></div>
+                  <span class="relative z-10 text-white font-bold text-sm">Sim, com certeza</span>
+                  <span class="relative z-10 text-white font-bold text-sm ml-auto">94%</span>
+                </div>
+                <div class="relative w-full bg-black/40 rounded-xl overflow-hidden h-12 flex items-center px-4 border border-gray-800">
+                  <div class="absolute top-0 left-0 h-full bg-white/10 w-[6%] transition-all duration-1000"></div>
+                  <span class="relative z-10 text-gray-400 font-medium text-sm">Não sofro com isso</span>
+                  <span class="relative z-10 text-gray-400 font-medium text-sm ml-auto">6%</span>
+                </div>
+                
+                <div class="mt-6 pt-4 border-t border-purple-500/20">
+                  <p class="text-sm text-gray-300 font-light italic">
+                    <span class="text-vrt-gold font-semibold">A verdade é dura:</span> Você não está sozinho. Mas enquanto 94% continua perdendo dinheiro, você está a um passo de se destacar com uma solução profunda.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
           
@@ -76,6 +116,11 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 const glassContainer = ref(null)
 const glassProgress = ref(0) // Vai de 0 a 1
+const pollAnswered = ref(false)
+
+const answerPoll = () => {
+  pollAnswered.value = true
+}
 
 const sectionRef = ref(null)
 const isVisible = ref(false)

@@ -24,7 +24,7 @@
             <!-- O Selo Físico -->
             <div class="relative w-56 h-56 lg:w-72 lg:h-72 rounded-full bg-gradient-to-br from-[#1a1f2e] to-[#0a0f1c] border-4 border-vrt-gold flex flex-col items-center justify-center shadow-[0_0_50px_rgba(197,160,89,0.3)] transform transition-transform duration-700 hover:scale-105 hover:rotate-3">
               <svg class="w-16 h-16 lg:w-20 lg:h-20 text-vrt-gold mb-2 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-              <div class="text-5xl lg:text-7xl font-abhaya font-black text-white leading-none tracking-tighter">7</div>
+              <div class="text-5xl lg:text-7xl font-abhaya font-black text-white leading-none tracking-tighter">30</div>
               <div class="text-vrt-gold font-bold tracking-[0.3em] uppercase text-xs lg:text-sm mt-1">Dias</div>
             </div>
           </div>
@@ -38,23 +38,23 @@
             </div>
             
             <h2 class="text-4xl md:text-5xl font-abhaya font-extrabold text-white mb-8 leading-tight">
-              A garantia que <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F2D492] to-[#8C6D33]">elimina todos os seus medos</span>
+              Garantia <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F2D492] to-[#8C6D33]">Blindada</span> e Alerta de Risco!
             </h2>
             
             <div class="space-y-6 text-lg lg:text-xl text-gray-300 font-light font-montserrat leading-relaxed">
               <p>
-                Sabemos que investir em sua carreira é uma grande decisão. Por isso, oferecemos uma 
-                <strong class="text-white font-semibold">garantia incondicional de 7 dias.</strong> 
+                Estamos tão confiantes na eficácia da Bio que Vende que oferecemos uma 
+                <strong class="text-white font-semibold">garantia de satisfação de 30 dias.</strong> 
               </p>
               
               <div class="pl-6 border-l-2 border-vrt-gold/50 py-2">
                 <p class="text-white italic">
-                  Se você não estiver 100% satisfeito com sua Link Page, nós devolvemos cada centavo do seu investimento, sem letras miúdas, sem perguntas e sem ressentimentos.
+                  Se você não notar uma diferença significativa em sua presença digital, devolveremos seu dinheiro sem perguntas.
                 </p>
               </div>
               
               <p class="text-gray-400 text-base mt-8">
-                O único risco que você corre hoje é o de continuar sendo ignorado pelos seus potenciais clientes. A escolha é sua.
+                <strong class="text-red-500 uppercase tracking-widest text-xs">Atenção:</strong> se você não agir agora, corre o risco de continuar invisível no mercado!
               </p>
             </div>
           </div>

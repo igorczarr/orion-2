@@ -149,17 +149,92 @@
         </div>
       </div>
 
-      <!-- A dor & O Mecanismo Único (Restante da Seção Original) -->
+      <!-- Comparação A/B -->
+      <div class="mt-40 mb-20 transition-all duration-1000 reveal-delay-300" :class="isVisible ? 'reveal-visible' : 'reveal-hidden'">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-5xl font-abhaya font-extrabold text-white mb-4">
+            A Diferença é <span class="text-red-500">Gritante</span>
+          </h2>
+          <p class="text-gray-400 text-lg font-light">Qual dessas opções você acha que transmite mais autoridade?</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <!-- O Link Genérico -->
+          <div class="bg-[#0b0c0f] border border-gray-800 rounded-[3rem] p-8 flex flex-col items-center opacity-70 filter grayscale-[30%] hover:grayscale-0 transition-all duration-500 hover:border-red-900/50">
+            <div class="text-gray-500 font-bold tracking-widest uppercase text-xs mb-6 flex items-center gap-2">
+              <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+              Link Genérico (O padrão que afasta clientes)
+            </div>
+            
+            <!-- Simulador de UI Feia -->
+            <div class="w-full max-w-[280px] bg-gray-200 rounded-3xl p-6 flex flex-col items-center shadow-inner relative overflow-hidden">
+              <div class="absolute inset-0 bg-black/5"></div>
+              <!-- Spinner de Loading Lento -->
+              <div class="absolute top-4 right-4 w-4 h-4 border-2 border-gray-400 border-t-transparent rounded-full animate-spin"></div>
+              
+              <div class="w-20 h-20 bg-gray-400/50 rounded-full mb-4 animate-pulse"></div>
+              <div class="w-32 h-4 bg-gray-400/50 mb-2 rounded"></div>
+              <div class="w-24 h-3 bg-gray-400/30 mb-8 rounded"></div>
+              
+              <!-- Botões Feios -->
+              <div class="w-full space-y-3 relative z-10">
+                <div class="w-full h-12 bg-blue-600/80 rounded flex items-center justify-center text-white/50 text-xs font-bold">MEU WHATSAPP</div>
+                <div class="w-full h-12 bg-white border border-gray-400 rounded flex items-center justify-center text-gray-400 text-xs font-bold shadow-sm">MEU SITE</div>
+                <div class="w-full h-12 bg-purple-600/80 rounded flex items-center justify-center text-white/50 text-xs font-bold">COMPRAR MENTORIA</div>
+              </div>
+            </div>
+            <div class="mt-8 text-center text-sm text-gray-500 font-medium px-4">
+              "Carregando... O cliente já foi embora."
+            </div>
+          </div>
+
+          <!-- A Bio que Vende -->
+          <div class="bg-gradient-to-br from-[#0a0f1c] to-[#04060a] border-2 border-vrt-gold/50 rounded-[3rem] p-8 flex flex-col items-center shadow-[0_0_80px_rgba(197,160,89,0.15)] transform scale-105 z-10 relative">
+            <div class="absolute -top-4 bg-vrt-gold text-black font-bold px-6 py-1 rounded-full text-xs uppercase tracking-widest shadow-lg animate-pulse">
+              A Escolha dos Especialistas
+            </div>
+            <div class="text-vrt-gold font-bold tracking-widest uppercase text-xs mb-6 mt-4 flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Bio que Vende (Premium)
+            </div>
+            
+            <!-- Simulador de UI Premium -->
+            <div class="w-full max-w-[280px] bg-[#0A1128] rounded-[2rem] p-6 flex flex-col items-center border border-gray-700 shadow-2xl relative overflow-hidden">
+              <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMSIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==')] opacity-[0.03]"></div>
+              
+              <div class="w-20 h-20 bg-gradient-to-br from-vrt-gold to-yellow-600 rounded-full mb-4 p-[2px] shadow-[0_0_20px_rgba(197,160,89,0.3)]">
+                <div class="w-full h-full bg-[#0A1128] rounded-full flex items-center justify-center">
+                   <img src="/images/Dourado-4.png" class="w-10 h-10 opacity-90 drop-shadow-md" />
+                </div>
+              </div>
+              <div class="text-white font-abhaya font-bold text-xl mb-1 drop-shadow-sm">Dra. Camila</div>
+              <div class="text-vrt-gold text-xs mb-6 uppercase tracking-widest">Especialista</div>
+              
+              <!-- Botões Premium -->
+              <div class="w-full space-y-3 relative z-10">
+                <div class="w-full py-3 px-4 bg-white/5 border border-white/10 rounded-2xl text-white text-sm text-center font-medium backdrop-blur-md hover:bg-white/10 transition-colors">Agendar Consulta</div>
+                <div class="w-full py-3 px-4 bg-white/5 border border-white/10 rounded-2xl text-white text-sm text-center font-medium backdrop-blur-md hover:bg-white/10 transition-colors">Ver Serviços</div>
+                <div class="w-full py-3 px-4 bg-gradient-to-r from-vrt-gold to-[#997637] text-[#0A1128] border border-vrt-gold/50 rounded-2xl text-sm text-center font-bold shadow-[0_0_15px_rgba(197,160,89,0.3)] hover:scale-105 transition-transform">Falar no WhatsApp</div>
+              </div>
+            </div>
+            <div class="mt-8 text-center text-sm text-green-400 font-medium px-4">
+              "Uau! Essa pessoa sabe o que está fazendo. Me passa confiança!"
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Provas Científicas & O Mecanismo Único -->
       <div class="grid lg:grid-cols-2 gap-16 items-start mt-24 transition-all duration-1000 reveal-delay-400" :class="isVisible ? 'reveal-visible' : 'reveal-hidden'">
-        <!-- A dor -->
+        <!-- Provas Científicas -->
         <div class="space-y-8 sticky top-32">
           <h2 class="text-4xl font-abhaya font-bold text-white leading-tight">
-            A dor da invisibilidade e a <br/>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-vrt-gold to-yellow-600">solução que você merece</span>
+            Provas Científicas e <br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-vrt-gold to-yellow-600">Dados que Comprovam Nossa Eficácia</span>
           </h2>
           <div class="w-20 h-1 bg-gradient-to-r from-vrt-gold to-transparent rounded-full"></div>
           <p class="text-xl text-gray-300 font-light leading-relaxed">
-            Você já se sentiu frustrado ao ver pessoas menos qualificadas alcançando sucesso? A verdade é que a falta de uma presença digital sólida pode ser sua maior inimiga. <strong class="text-white font-medium">Você merece ser reconhecido pelo seu verdadeiro valor.</strong>
+            A ciência não mente. Estudos de neurociência mostram que a primeira impressão é crucial; em apenas 0,05 segundos, as pessoas formam uma opinião sobre você. Isso significa que sua apresentação digital precisa ser impecável. <strong class="text-white font-medium">Dados de UX revelam que uma página bem projetada pode aumentar as taxas de conversão em até 400%.</strong>
           </p>
         </div>
 
@@ -167,9 +242,9 @@
         <div class="glass-dark p-10 md:p-14 rounded-[2.5rem] border border-gray-800 shadow-2xl relative overflow-hidden group hover:border-vrt-gold/30 transition-colors duration-500">
           <div class="absolute inset-0 bg-gradient-to-br from-vrt-gold/5 to-transparent opacity-50 pointer-events-none group-hover:opacity-100 transition-opacity duration-700"></div>
           
-          <h3 class="text-3xl font-abhaya font-bold text-white mb-8 relative z-10">O mecanismo único que faz nosso serviço funcionar</h3>
+          <h3 class="text-3xl font-abhaya font-bold text-white mb-8 relative z-10">O Mecanismo Único da Bio que Vende</h3>
           <p class="text-gray-300 text-lg mb-12 font-light relative z-10 leading-relaxed">
-            A nossa abordagem combina técnicas de marketing avançadas com um design que realmente ressoa com seu público-alvo. A <strong class="text-vrt-gold font-medium bg-vrt-gold/10 px-2 py-1 rounded">engenharia de reconhecimento digital</strong> que aplicamos é o que diferencia nosso serviço.
+            Quando você se apresenta como uma autoridade, o cérebro humano ativa o viés de confirmação, onde as pessoas tendem a acreditar que você é realmente quem diz ser. Com a Bio que Vende, você não apenas melhora sua apresentação, mas também ativa esse <strong class="text-vrt-gold font-medium bg-vrt-gold/10 px-2 py-1 rounded">mecanismo psicológico</strong> que gera confiança imediata.
           </p>
 
           <ul class="space-y-10 relative z-10">
@@ -221,10 +296,10 @@ const isVisible = ref(false)
 let observer = null
 
 const steps = [
-  { id: 1, title: 'Análise Profunda', desc: 'Estudamos suas necessidades e objetivos.' },
-  { id: 2, title: 'Design Personalizado', desc: 'Criamos um layout que reflete sua identidade e expertise.' },
-  { id: 3, title: 'Otimização para Conversão', desc: 'Aplicamos estratégias que garantem que sua página converta visitantes em clientes.' },
-  { id: 4, title: 'Entrega Rápida', desc: 'Você recebe tudo pronto, sem complicações.' }
+  { id: 1, title: 'Análise de Dados', desc: 'Entendemos o que seu público realmente deseja.' },
+  { id: 2, title: 'Design de Conversão', desc: 'Criamos uma experiência que direciona o visitante até a ação desejada.' },
+  { id: 3, title: 'Estratégias Personalizadas', desc: 'Adaptamos cada elemento para refletir sua verdadeira essência e expertise.' },
+  { id: 4, title: 'Ativação Psicológica', desc: 'Aceleramos a autoridade ativando gatilhos mentais que geram confiança instantânea em apenas 0,05s.' }
 ]
 
 // The wheel rotation calculation:

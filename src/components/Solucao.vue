@@ -10,10 +10,9 @@
       
       <!-- Cabeçalho (Minimalista, Dopaminérgico) -->
       <div class="text-center mb-32 transition-all duration-1000 transform" :class="isVisible ? 'reveal-visible' : 'reveal-hidden'">
-        <p class="text-vrt-gold font-bold tracking-[0.3em] uppercase text-xs mb-6 animate-pulse">A Quebra de Padrão</p>
+        <p class="text-vrt-gold font-bold tracking-[0.3em] uppercase text-xs mb-6 animate-pulse">A Solução que Você Esperava</p>
         <h2 class="text-5xl md:text-7xl lg:text-[6rem] font-abhaya font-extrabold text-white leading-[1.05] tracking-tight drop-shadow-2xl">
-          Sua <span class="text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-500">identidade.</span><br/>
-          Sem <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F2D492] to-[#8C6D33] italic pr-2">nenhum esforço.</span>
+          Bio que <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F2D492] to-[#8C6D33] italic pr-2">Vende.</span>
         </h2>
       </div>
 
@@ -28,11 +27,10 @@
           <div class="flex flex-col md:flex-row md:items-center gap-6 mb-6">
             <div class="w-px h-16 bg-gradient-to-b from-vrt-gold to-transparent hidden md:block"></div>
             <div class="h-px w-16 bg-gradient-to-r from-vrt-gold to-transparent md:hidden block"></div>
-            <h3 class="text-4xl md:text-6xl font-abhaya font-bold text-white tracking-wide">Done-For-You</h3>
+            <h3 class="text-4xl md:text-6xl font-abhaya font-bold text-white tracking-wide">Feito Sob Medida</h3>
           </div>
           <p class="text-xl md:text-2xl text-gray-400 font-light leading-relaxed max-w-lg md:pl-6">
-            Nós abolimos construtores arrastados. Nós montamos toda a engenharia visual. 
-            Por únicos <strong class="text-white font-medium">R$ 50</strong>, entregamos a chave na sua mão. Sem mensalidades.
+            Aqui está a grande virada: a Bio que Vende não é apenas mais uma promessa vazia. É um serviço onde <strong class="text-white font-medium">nós cuidamos de tudo para você.</strong>
           </p>
         </div>
 
@@ -44,10 +42,10 @@
           <div class="flex flex-col md:flex-row-reverse md:items-center gap-6 mb-6 text-left md:text-right">
             <div class="w-px h-16 bg-gradient-to-b from-vrt-gold to-transparent hidden md:block"></div>
             <div class="h-px w-16 bg-gradient-to-l from-vrt-gold to-transparent md:hidden block"></div>
-            <h3 class="text-4xl md:text-6xl font-abhaya font-bold text-white tracking-wide">Alta Costura <br class="hidden md:block"/> Digital</h3>
+            <h3 class="text-4xl md:text-6xl font-abhaya font-bold text-white tracking-wide">Foco em <br class="hidden md:block"/> Conversão</h3>
           </div>
           <p class="text-xl md:text-2xl text-gray-400 font-light leading-relaxed max-w-lg ml-auto text-left md:text-right md:pr-6">
-            Enquanto as ferramentas gratuitas deixam todos iguais, nossos designers moldam os pixels para refletir perfeitamente o seu <span class="text-vrt-gold italic">status de especialista</span>.
+            Desde o design até a otimização, cada elemento da sua Link Page é desenvolvido com um único propósito: <span class="text-vrt-gold italic">converter visitantes em clientes.</span>
           </p>
         </div>
         

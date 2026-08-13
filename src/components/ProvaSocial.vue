@@ -12,106 +12,113 @@
         :class="isVisible ? 'reveal-visible' : 'reveal-hidden'"
       >
         <div class="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-vrt-gold/30 bg-vrt-gold/10 backdrop-blur-md mb-8 shadow-xl">
-          <svg class="w-4 h-4 text-vrt-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"></path></svg>
-          <span class="text-vrt-gold font-bold tracking-widest uppercase text-xs">Wall of Love (Mural de Resultados)</span>
+          <svg class="w-4 h-4 text-vrt-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path></svg>
+          <span class="text-vrt-gold font-bold tracking-widest uppercase text-xs">Dados e Fatos</span>
         </div>
         
         <h2 class="text-4xl md:text-5xl lg:text-6xl font-abhaya font-extrabold text-white mb-6 drop-shadow-xl">
-          Resultados Reais. <span class="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-100">Sem Filtros.</span>
+          A Ciência por trás <br class="hidden md:block"/> da <span class="text-transparent bg-clip-text bg-gradient-to-r from-vrt-gold to-yellow-600">Conversão</span>
         </h2>
-        <p class="text-gray-400 text-xl font-light">Os bastidores do que acontece quando você troca um link amador por uma Link Page profissional.</p>
+        <p class="text-gray-400 text-xl font-light max-w-2xl mx-auto">Por que o design premium não é um luxo, mas sim uma necessidade neurobiológica para vender online.</p>
       </div>
       
-      <!-- Masonry Grid de Prints Simulados (Autenticidade Crua) -->
-      <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 relative z-10">
+      <!-- Stories Grid (Evidências Empíricas) -->
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-10 relative z-10 mt-16 max-w-5xl mx-auto">
         
-        <!-- Chat Message 1 (WhatsApp Style) -->
-        <div class="break-inside-avoid bg-[#1e2430]/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6 shadow-lg transition-all duration-1000 reveal-delay-100 hover:border-green-500/30" :class="isVisible ? 'reveal-visible' : 'reveal-hidden'">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white font-bold text-sm">F</div>
-            <div>
-              <div class="text-white font-semibold text-sm">Felipe (Mentoria)</div>
-              <div class="text-xs text-gray-400">Ontem às 18:42</div>
-            </div>
-            <svg class="w-4 h-4 ml-auto text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>
+        <!-- Story 1 -->
+        <div class="bg-[#0b101d] rounded-3xl h-[520px] border border-gray-800 shadow-2xl relative overflow-hidden flex flex-col hover:scale-[1.02] transition-transform duration-500 cursor-pointer group" :class="isVisible ? 'reveal-visible reveal-delay-100' : 'reveal-hidden'">
+          <!-- Story Progress -->
+          <div class="absolute top-4 left-4 right-4 flex gap-1 z-20">
+            <div class="h-1 bg-white/30 rounded-full flex-1 overflow-hidden"><div class="h-full bg-white w-[100%]"></div></div>
           </div>
-          <div class="bg-[#0b141a] text-gray-200 p-4 rounded-r-2xl rounded-bl-2xl rounded-tl-sm text-sm leading-relaxed border border-gray-800/80 relative">
-            "Irmão, fechei minha primeira mentoria hoje! O cliente disse que a página passou muita autoridade 🙏 Valeu demais pelo trabalho, o investimento já se pagou no primeiro dia kkk"
-            <div class="absolute -left-2 top-0 w-4 h-4 bg-[#0b141a] border-l border-t border-gray-800/80 transform -skew-x-12"></div>
-          </div>
-        </div>
-
-        <!-- Chat Message 2 (Instagram Direct Style) -->
-        <div class="break-inside-avoid bg-[#1e2430]/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6 shadow-lg transition-all duration-1000 reveal-delay-200 hover:border-pink-500/30" :class="isVisible ? 'reveal-visible' : 'reveal-hidden'">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 p-[2px]">
-              <div class="w-full h-full bg-[#1e2430] rounded-full flex items-center justify-center">
-                <img src="/images/Dourado-4.png" class="w-5 h-5 opacity-50" />
+          <!-- User Info -->
+          <div class="absolute top-8 left-4 z-20 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[2px]">
+              <div class="w-full h-full bg-[#0b101d] rounded-full flex items-center justify-center overflow-hidden">
+                <img src="/images/Dourado-4.png" class="w-5 h-5 opacity-90" />
               </div>
             </div>
-            <div>
-              <div class="text-white font-semibold text-sm">@carol.adv</div>
-              <div class="text-xs text-gray-400">Respondido ao seu story</div>
-            </div>
+            <span class="text-white text-xs font-semibold drop-shadow-md">vrtice.science</span>
+            <span class="text-gray-400 text-xs font-medium ml-1">4h</span>
           </div>
-          <div class="bg-gradient-to-r from-purple-600/20 to-pink-600/20 text-gray-200 p-4 rounded-2xl text-sm leading-relaxed border border-pink-500/20">
-            "Vrtice, os acessos no meu link da bio aumentaram absurdamente desde que troquei aquele linktree gratuito por vcs. O design ficou surreal, meus clientes amaram a paleta nova 😍"
+          
+          <div class="flex-1 flex flex-col items-center justify-center p-8 text-center relative z-10 bg-gradient-to-b from-[#0b101d] via-[#151124] to-[#0b101d]">
+            <div class="text-[5rem] mb-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 font-abhaya leading-none">0.05s</div>
+            <h4 class="text-white font-bold text-lg mb-4 uppercase tracking-widest text-xs border-b border-purple-500/30 pb-2">O Julgamento Límbico</h4>
+            <p class="text-gray-300 text-sm font-light leading-relaxed">Estudos neurocientíficos comprovam: o cérebro humano julga a credibilidade de um perfil online em apenas 50 milissegundos. Se o seu link é amador, a confiança é destruída antes mesmo do cliente ler o que você faz.</p>
           </div>
-        </div>
-
-        <!-- Metric Card (Case Study Format) -->
-        <div class="break-inside-avoid bg-gradient-to-br from-[#0a0f1c] to-[#04060a] border border-vrt-gold/30 rounded-2xl p-6 shadow-xl transition-all duration-1000 reveal-delay-300" :class="isVisible ? 'reveal-visible' : 'reveal-hidden'">
-          <div class="flex justify-between items-start mb-6">
-            <div class="bg-vrt-gold/10 p-2 rounded-lg">
-              <svg class="w-6 h-6 text-vrt-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-            </div>
-            <div class="text-right">
-              <div class="text-2xl font-bold text-white">+312%</div>
-              <div class="text-[10px] uppercase tracking-widest text-vrt-gold">Cliques no Botão</div>
-            </div>
-          </div>
-          <p class="text-sm text-gray-400 font-light italic">
-            "A taxa de conversão do meu WhatsApp explodiu. O design direciona o olhar certinho pro botão. Genial."
-          </p>
-          <div class="mt-4 pt-4 border-t border-gray-800 flex items-center gap-2">
-            <div class="w-6 h-6 bg-gray-700 rounded-full"></div>
-            <span class="text-xs font-semibold text-gray-300">Marcos T. (Personal Trainer)</span>
+          
+          <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <svg class="w-5 h-5 text-white animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+            <span class="text-[10px] text-white font-bold uppercase tracking-widest mt-1">Arrastar</span>
           </div>
         </div>
 
-        <!-- Chat Message 3 (WhatsApp Style) -->
-        <div class="break-inside-avoid bg-[#1e2430]/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6 shadow-lg transition-all duration-1000 reveal-delay-400 hover:border-green-500/30" :class="isVisible ? 'reveal-visible' : 'reveal-hidden'">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center text-white font-bold text-sm">D</div>
-            <div>
-              <div class="text-white font-semibold text-sm">Dr. Leandro</div>
-              <div class="text-xs text-gray-400">Hoje às 09:12</div>
-            </div>
+        <!-- Story 2 -->
+        <div class="bg-[#0b101d] rounded-3xl h-[520px] border border-gray-800 shadow-2xl relative overflow-hidden flex flex-col hover:scale-[1.02] transition-transform duration-500 cursor-pointer group" :class="isVisible ? 'reveal-visible reveal-delay-300' : 'reveal-hidden'">
+          <!-- Story Progress -->
+          <div class="absolute top-4 left-4 right-4 flex gap-1 z-20">
+            <div class="h-1 bg-white/30 rounded-full flex-1 overflow-hidden"><div class="h-full bg-white w-[100%]"></div></div>
           </div>
-          <div class="bg-[#0b141a] text-gray-200 p-4 rounded-r-2xl rounded-bl-2xl rounded-tl-sm text-sm leading-relaxed border border-gray-800/80 relative">
-            "Cara, não tô acreditando. Subi a página ontem à noite na bio e já recebi 3 contatos de orçamento hoje cedo. Aquele esquema do botão pulsando ficou perfeito."
-            <div class="absolute -left-2 top-0 w-4 h-4 bg-[#0b141a] border-l border-t border-gray-800/80 transform -skew-x-12"></div>
+          <!-- User Info -->
+          <div class="absolute top-8 left-4 z-20 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[2px]">
+              <div class="w-full h-full bg-[#0b101d] rounded-full flex items-center justify-center overflow-hidden">
+                <img src="/images/Dourado-4.png" class="w-5 h-5 opacity-90" />
+              </div>
+            </div>
+            <span class="text-white text-xs font-semibold drop-shadow-md">vrtice.data</span>
+            <span class="text-gray-400 text-xs font-medium ml-1">6h</span>
+          </div>
+          
+          <div class="flex-1 flex flex-col items-center justify-center p-8 text-center relative z-10 bg-gradient-to-b from-[#0b101d] via-[#111e15] to-[#0b101d]">
+            <div class="text-[4rem] mb-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600 font-abhaya leading-none">+400%</div>
+            <h4 class="text-white font-bold text-lg mb-4 uppercase tracking-widest text-xs border-b border-green-500/30 pb-2">O Poder da Estética</h4>
+            <p class="text-gray-300 text-sm font-light leading-relaxed">Dados empíricos de UI/UX revelam que uma interface intencionalmente projetada pode aumentar as taxas de conversão de leads em até 400%. O design não é cosmético, é o motor da lucratividade.</p>
+          </div>
+          
+          <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <svg class="w-5 h-5 text-white animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+            <span class="text-[10px] text-white font-bold uppercase tracking-widest mt-1">Arrastar</span>
           </div>
         </div>
 
-        <!-- Chat Message 4 (Email / Standard) -->
-        <div class="break-inside-avoid bg-[#1e2430]/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6 shadow-lg transition-all duration-1000 reveal-delay-500" :class="isVisible ? 'reveal-visible' : 'reveal-hidden'">
-          <div class="flex items-center gap-2 mb-3">
-            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
-            <span class="text-xs text-gray-400 font-medium">Feedback de Entrega</span>
+        <!-- Story 3 -->
+        <div class="bg-[#0b101d] rounded-3xl h-[520px] border border-gray-800 shadow-2xl relative overflow-hidden flex flex-col hover:scale-[1.02] transition-transform duration-500 cursor-pointer group" :class="isVisible ? 'reveal-visible reveal-delay-500' : 'reveal-hidden'">
+          <!-- Story Progress -->
+          <div class="absolute top-4 left-4 right-4 flex gap-1 z-20">
+            <div class="h-1 bg-white/30 rounded-full flex-1 overflow-hidden"><div class="h-full bg-white w-[100%]"></div></div>
           </div>
-          <p class="text-sm text-gray-300 leading-relaxed font-light">
-            "Só passando pra agradecer a agilidade. A página ficou exatamente com a minha cara. Muito superior àquela ferramenta que eu tava usando antes. Recomendo de olhos fechados!"
-          </p>
+          <!-- User Info -->
+          <div class="absolute top-8 left-4 z-20 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[2px]">
+              <div class="w-full h-full bg-[#0b101d] rounded-full flex items-center justify-center overflow-hidden">
+                <img src="/images/Dourado-4.png" class="w-5 h-5 opacity-90" />
+              </div>
+            </div>
+            <span class="text-white text-xs font-semibold drop-shadow-md">vrtice.psych</span>
+            <span class="text-gray-400 text-xs font-medium ml-1">12h</span>
+          </div>
+          
+          <div class="flex-1 flex flex-col items-center justify-center p-8 text-center relative z-10 bg-gradient-to-b from-[#0b101d] via-[#1e1710] to-[#0b101d]">
+            <div class="text-[4rem] mb-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-vrt-gold to-orange-500 font-abhaya leading-none">Viés</div>
+            <h4 class="text-white font-bold text-lg mb-4 uppercase tracking-widest text-xs border-b border-vrt-gold/30 pb-2">Viés de Confirmação</h4>
+            <p class="text-gray-300 text-sm font-light leading-relaxed">Quando você se apresenta visualmente como uma autoridade Premium, o cérebro do consumidor busca automaticamente confirmar essa narrativa. É por isso que nossos clientes cobram mais caro e ouvem menos "está caro".</p>
+          </div>
+          
+          <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <svg class="w-5 h-5 text-white animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+            <span class="text-[10px] text-white font-bold uppercase tracking-widest mt-1">Arrastar</span>
+          </div>
         </div>
 
       </div>
       
       <!-- CTA para a Oferta -->
       <div class="mt-20 text-center transition-all duration-1000 reveal-delay-500" :class="isVisible ? 'reveal-visible' : 'reveal-hidden'">
-        <p class="text-vrt-gold font-bold uppercase tracking-widest text-sm mb-4">Faça parte desse mural</p>
-        <a href="#oferta" class="inline-block border border-vrt-gold text-vrt-gold font-bold px-8 py-3 rounded-full hover:bg-vrt-gold hover:text-[#040814] transition-colors duration-300">
-          QUERO MEUS RESULTADOS AGORA
+        <p class="text-gray-400 font-bold uppercase tracking-widest text-sm mb-4">A ciência comprova, nós executamos.</p>
+        <a href="#oferta" class="inline-block bg-vrt-gold text-[#040814] shadow-[0_0_20px_rgba(197,160,89,0.3)] font-bold px-10 py-4 rounded-full hover:scale-105 transition-transform duration-300">
+          QUERO DOMINAR O MERCADO
         </a>
       </div>
       

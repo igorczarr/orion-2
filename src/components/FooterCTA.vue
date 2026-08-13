@@ -9,7 +9,7 @@
         :class="{ 'translate-y-0 opacity-100': isVisible, 'translate-y-10 opacity-0': !isVisible }"
       >
         <h2 class="text-4xl md:text-5xl font-abhaya font-light text-white mb-10 leading-tight">
-          Sua Janela de <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-vrt-gold to-yellow-600">Oportunidade</span>
+          A Hora é <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-vrt-gold to-yellow-600">Agora!</span>
         </h2>
       </div>
       
@@ -20,7 +20,7 @@
         style="transition-delay: 200ms;"
       >
         <p class="text-xl md:text-2xl text-gray-400 font-light leading-relaxed mb-12">
-          As oportunidades não esperam. O mercado está em constante mudança, e cada dia que passa é uma chance a menos de se destacar.
+          Atenção: Esta oferta é por tempo limitado! Apenas os primeiros 100 clientes terão acesso a este preço especial. 
         </p>
         
         <!-- Status de Capacidade Realista (Elegante e Verdadeiro) -->
@@ -34,21 +34,21 @@
           </div>
           <div class="h-px w-8 bg-gray-700 hidden md:block"></div>
           <p class="text-gray-400 text-sm md:text-base text-left">
-            As vagas são limitadas a <strong class="text-white">apenas 50 profissionais por mês</strong>, e não podemos garantir que essa oferta e esse pacote de bônus estarão disponíveis por muito tempo.
+            As vagas são limitadas a <strong class="text-white">apenas os primeiros 100 clientes</strong>. Não perca a chance de transformar sua presença digital e conquistar o reconhecimento que você merece.
           </p>
         </div>
         
         <div class="space-y-6 text-lg text-gray-300 font-montserrat">
-          <p class="font-light">Não deixe para amanhã o que pode mudar sua carreira hoje! Clique no botão abaixo e comece sua transformação agora mesmo!</p>
+          <p class="font-light">Essa oportunidade não vai durar para sempre!</p>
           
           <div class="py-10">
             <p class="font-bold text-white text-3xl font-abhaya leading-tight">
-              Transforme sua presença digital e seja reconhecido como um especialista!
+              Transforme Sua Presença Digital Agora!
             </p>
           </div>
           
           <p class="font-light">
-            Clique no botão abaixo e contrate nosso serviço de Link Pages profissionais agora mesmo antes que as 50 vagas se encerrem!
+            Clique no botão abaixo e inicie sua transformação. Não fique para trás. Torne-se a autoridade que você sempre sonhou ser!
           </p>
         </div>
       </div>
@@ -59,8 +59,8 @@
         :class="{ 'scale-100 opacity-100': isVisible, 'scale-95 opacity-0': !isVisible }"
         style="transition-delay: 400ms;"
       >
-        <a href="#oferta" class="inline-flex items-center justify-center px-10 py-5 font-bold text-lg text-[#040814] bg-vrt-gold rounded-full transition-all duration-300 hover:bg-white shadow-[0_0_20px_rgba(197,160,89,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]">
-          QUERO MINHA LINK PAGE AGORA!
+        <a href="#oferta" class="inline-flex items-center justify-center px-10 py-5 font-bold text-lg text-[#040814] bg-vrt-gold rounded-full transition-all duration-300 hover:bg-white shadow-[0_0_20px_rgba(197,160,89,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] tracking-wide">
+          QUERO MINHA BIO QUE VENDE!
         </a>
       </div>
       

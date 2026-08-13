@@ -11,8 +11,8 @@
       <!-- Cabeçalho da Oferta -->
       <div class="text-center mb-16 transition-all duration-1000 transform" :class="{ 'translate-y-0 opacity-100': isVisible, 'translate-y-10 opacity-0': !isVisible }">
         <h2 class="text-4xl md:text-5xl lg:text-[4rem] font-abhaya font-extrabold text-white mb-6 drop-shadow-2xl leading-tight">
-          Uma Proposta <br class="hidden md:block"/>
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F2D492] via-vrt-gold to-yellow-600">Exclusiva</span>
+          A Oferta <br class="hidden md:block"/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F2D492] via-vrt-gold to-yellow-600">Irrecusável</span>
         </h2>
         <p class="text-2xl text-gray-300 font-light">
           Tudo o que você precisa por apenas <strong class="text-vrt-gold font-bold text-3xl">R$ 50</strong>
@@ -48,19 +48,25 @@
                 <div class="mt-1 mr-4 shrink-0 bg-gray-800 p-1.5 rounded-full border border-gray-700 group-hover:bg-vrt-gold/20 group-hover:border-vrt-gold/50 transition-colors">
                   <svg class="w-5 h-5 text-vrt-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                 </div>
-                <span class="text-gray-300 text-lg font-light leading-snug pt-1 group-hover:text-white transition-colors">Uma Link Page profissional feita sob medida.</span>
+                <span class="text-gray-300 text-lg font-light leading-snug pt-1 group-hover:text-white transition-colors"><strong class="font-medium text-white">Construção Completa da Sua Link Page:</strong> Nós fazemos tudo por você.</span>
               </li>
               <li class="flex items-start group">
                 <div class="mt-1 mr-4 shrink-0 bg-gray-800 p-1.5 rounded-full border border-gray-700 group-hover:bg-vrt-gold/20 group-hover:border-vrt-gold/50 transition-colors">
                   <svg class="w-5 h-5 text-vrt-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                 </div>
-                <span class="text-gray-300 text-lg font-light leading-snug pt-1 group-hover:text-white transition-colors">Otimização para SEO para aumentar sua visibilidade.</span>
+                <span class="text-gray-300 text-lg font-light leading-snug pt-1 group-hover:text-white transition-colors"><strong class="font-medium text-white">Design Profissional e Atraente:</strong> Que encanta e converte.</span>
               </li>
               <li class="flex items-start group">
                 <div class="mt-1 mr-4 shrink-0 bg-gray-800 p-1.5 rounded-full border border-gray-700 group-hover:bg-vrt-gold/20 group-hover:border-vrt-gold/50 transition-colors">
                   <svg class="w-5 h-5 text-vrt-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                 </div>
-                <span class="text-gray-300 text-lg font-light leading-snug pt-1 group-hover:text-white transition-colors">Suporte técnico durante todo o processo.</span>
+                <span class="text-gray-300 text-lg font-light leading-snug pt-1 group-hover:text-white transition-colors"><strong class="font-medium text-white">Otimização para SEO:</strong> Para garantir que você seja encontrado.</span>
+              </li>
+              <li class="flex items-start group">
+                <div class="mt-1 mr-4 shrink-0 bg-gray-800 p-1.5 rounded-full border border-gray-700 group-hover:bg-vrt-gold/20 group-hover:border-vrt-gold/50 transition-colors">
+                  <svg class="w-5 h-5 text-vrt-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span class="text-gray-300 text-lg font-light leading-snug pt-1 group-hover:text-white transition-colors"><strong class="font-medium text-white">Suporte e Acompanhamento:</strong> Garantindo que sua página esteja sempre atualizada.</span>
               </li>
             </ul>
             
@@ -76,14 +82,22 @@
               
               <ul class="space-y-6 mt-6">
                 <li class="flex items-start">
-                  <div class="text-3xl mr-4 drop-shadow-md">📚</div>
+                  <div class="text-3xl mr-4 drop-shadow-md">📊</div>
                   <div>
-                    <strong class="text-white text-lg block mb-1 font-abhaya">E-book “Como Maximizar sua Presença Online”</strong>
-                    <div class="text-red-400 text-xs font-bold uppercase tracking-wide mb-1">Valor Real: <span class="line-through">R$ 97,00</span></div>
-                    <p class="text-gray-400 font-light text-sm leading-relaxed">Dicas práticas e estratégias que complementam sua Link Page.</p>
+                    <strong class="text-white text-lg block mb-1 font-abhaya">PDF de Análise de Perfil (Guia de Marketing)</strong>
+                    <div class="text-red-400 text-xs font-bold uppercase tracking-wide mb-1">Valor Real: <span class="line-through">R$ 200,00</span></div>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed">Nós te diremos exatamente o que escrever na sua Bio, destaques e posts fixados para turbinar o seu perfil.</p>
                   </div>
                 </li>
-
+                
+                <li class="flex items-start">
+                  <div class="text-3xl mr-4 drop-shadow-md">🎥</div>
+                  <div>
+                    <strong class="text-white text-lg block mb-1 font-abhaya">Acesso a Webinar com Estratégias Avançadas</strong>
+                    <div class="text-red-400 text-xs font-bold uppercase tracking-wide mb-1">Valor Real: <span class="line-through">R$ 150,00</span></div>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed">Estratégias fechadas para potencializar sua conversão online.</p>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -99,28 +113,24 @@
             <div class="w-full bg-[#0a0f1c] p-6 rounded-2xl border border-gray-800 mb-8 shadow-inner">
               <h4 class="text-gray-300 font-bold mb-4 text-xs uppercase tracking-wider flex items-center gap-2">
                 <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                O custo tradicional de um site:
+                O valor que você está levando hoje:
               </h4>
               <div class="space-y-3 mb-4">
                 <div class="flex justify-between text-gray-500 text-sm">
-                  <span>Design & Desenvolvimento:</span>
+                  <span>Construção & Design:</span>
+                  <span>R$ 500,00</span>
+                </div>
+                <div class="flex justify-between text-gray-500 text-sm">
+                  <span>Total de Bônus:</span>
                   <span>R$ 350,00</span>
-                </div>
-                <div class="flex justify-between text-gray-500 text-sm">
-                  <span>Hospedagem (Anual):</span>
-                  <span>R$ 120,00</span>
-                </div>
-                <div class="flex justify-between text-gray-500 text-sm">
-                  <span>Domínio & Mensalidades:</span>
-                  <span>R$ 240,00</span>
                 </div>
               </div>
               
               <div class="w-full h-px bg-gray-800/80 my-3"></div>
               
               <div class="flex justify-between text-gray-400 font-semibold text-sm">
-                <span>Gasto Total Estimado:</span>
-                <span class="text-gray-600 line-through">R$ 710,00</span>
+                <span>Valor Total do Serviço + Bônus:</span>
+                <span class="text-gray-600 line-through">R$ 850,00</span>
               </div>
             </div>
             

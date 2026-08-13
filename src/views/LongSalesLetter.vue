@@ -5,9 +5,11 @@
     
     <!-- Componentes da Landing Page -->
     <div class="relative z-10 flex flex-col">
+      <Navbar />
       <Hero :showButton="true" />
       <Problema />
       <Solucao />
+      <Jornada />
       <Mecanismo />
       <ProvaSocial />
       <Oferta />
@@ -18,9 +20,11 @@
 </template>
 
 <script setup>
+import Navbar from '../components/Navbar.vue'
 import Hero from '../components/Hero.vue'
 import Problema from '../components/Problema.vue'
 import Solucao from '../components/Solucao.vue'
+import Jornada from '../components/Jornada.vue'
 import Mecanismo from '../components/Mecanismo.vue'
 import ProvaSocial from '../components/ProvaSocial.vue'
 import Oferta from '../components/Oferta.vue'
