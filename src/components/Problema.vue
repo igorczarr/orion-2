@@ -85,14 +85,14 @@
               <!-- Resultados da Enquete -->
               <div class="space-y-4" v-else>
                 <div class="relative w-full bg-black/40 rounded-xl overflow-hidden h-12 flex items-center px-4 border border-vrt-gold/30">
-                  <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-vrt-gold to-yellow-600 w-[94%] transition-all duration-1000"></div>
+                  <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-vrt-gold to-yellow-600 transition-all duration-1000" :style="{ width: yesPercent + '%' }"></div>
                   <span class="relative z-10 text-white font-bold text-sm">Sim, com certeza</span>
-                  <span class="relative z-10 text-white font-bold text-sm ml-auto">94%</span>
+                  <span class="relative z-10 text-white font-bold text-sm ml-auto">{{ Math.round(yesPercent) }}% ({{ displayYesVotes }} votos)</span>
                 </div>
                 <div class="relative w-full bg-black/40 rounded-xl overflow-hidden h-12 flex items-center px-4 border border-gray-800">
-                  <div class="absolute top-0 left-0 h-full bg-white/10 w-[6%] transition-all duration-1000"></div>
+                  <div class="absolute top-0 left-0 h-full bg-white/10 transition-all duration-1000" :style="{ width: noPercent + '%' }"></div>
                   <span class="relative z-10 text-gray-400 font-medium text-sm">Não sofro com isso</span>
-                  <span class="relative z-10 text-gray-400 font-medium text-sm ml-auto">6%</span>
+                  <span class="relative z-10 text-gray-400 font-medium text-sm ml-auto">{{ Math.round(noPercent) }}% ({{ displayNoVotes }} votos)</span>
                 </div>
                 
                 <div class="mt-6 pt-4 border-t border-purple-500/20">
@@ -112,14 +112,88 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
 
 const glassContainer = ref(null)
 const glassProgress = ref(0) // Vai de 0 a 1
 const pollAnswered = ref(false)
 
-const answerPoll = () => {
+const yesVotes = ref(0)
+const noVotes = ref(0)
+const displayYesVotes = ref(0)
+const displayNoVotes = ref(0)
+
+const yesPercent = computed(() => {
+  const total = yesVotes.value + noVotes.value
+  return total === 0 ? 0 : (yesVotes.value / total) * 100
+})
+
+const noPercent = computed(() => {
+  const total = yesVotes.value + noVotes.value
+  return total === 0 ? 0 : (noVotes.value / total) * 100
+})
+
+const fetchVotes = async () => {
+  try {
+    const res = await fetch('http://localhost:3001/api/votes')
+    const data = await res.json()
+    yesVotes.value = data.yes
+    noVotes.value = data.no
+  } catch (e) {
+    console.error("Erro ao buscar votos", e)
+    yesVotes.value = 854
+    noVotes.value = 54
+  }
+}
+
+const answerPoll = async (answer) => {
   pollAnswered.value = true
+  
+  // Optimistic Update da lógica base
+  if (answer) yesVotes.value++
+  else noVotes.value++
+  
+  // Inicia a animação dos números mostrados na tela do zero até o valor otimista
+  animateValue(displayYesVotes, 0, yesVotes.value, 1500)
+  animateValue(displayNoVotes, 0, noVotes.value, 1500)
+  
+  try {
+    const res = await fetch('http://localhost:3001/api/votes', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ answer })
+    })
+    const data = await res.json()
+    
+    // Ajuste fino se o backend retornar algo diferente após a animação inicial
+    yesVotes.value = data.yes
+    noVotes.value = data.no
+    
+    // Atualiza os display votes pro valor real de forma suave
+    setTimeout(() => {
+      if (displayYesVotes.value !== yesVotes.value) animateValue(displayYesVotes, displayYesVotes.value, yesVotes.value, 500)
+      if (displayNoVotes.value !== noVotes.value) animateValue(displayNoVotes, displayNoVotes.value, noVotes.value, 500)
+    }, 1500)
+
+  } catch (e) {
+    console.error("Erro ao computar voto", e)
+  }
+}
+
+function animateValue(refVar, start, end, duration) {
+  if (start === end) return
+  const range = end - start
+  let current = start
+  const increment = end > start ? 1 : -1
+  const stepTime = Math.abs(Math.floor(duration / range))
+  
+  const timer = setInterval(() => {
+    current += increment
+    refVar.value = current
+    if (current === end) {
+      clearInterval(timer)
+    }
+  }, stepTime)
 }
 
 const sectionRef = ref(null)
@@ -144,6 +218,7 @@ const handleScroll = () => {
 }
 
 onMounted(() => {
+  fetchVotes()
   window.addEventListener('scroll', handleScroll, { passive: true })
   handleScroll()
   

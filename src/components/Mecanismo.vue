@@ -29,8 +29,9 @@
         <div class="relative w-full aspect-square max-w-[500px] mx-auto flex items-center justify-center">
           
           <!-- Outer Decorative Rings -->
-          <div class="absolute inset-4 rounded-full border border-gray-800 border-dashed animate-[spin_40s_linear_infinite]"></div>
-          <div class="absolute inset-12 rounded-full border border-vrt-gold/10 animate-[spin_20s_linear_infinite_reverse]"></div>
+          <div class="absolute inset-4 rounded-full border-2 border-transparent border-t-vrt-gold/40 border-b-vrt-gold/20 shadow-[0_0_30px_rgba(197,160,89,0.3)] animate-[spin_10s_linear_infinite]"></div>
+          <div class="absolute inset-10 rounded-full border border-dashed border-vrt-gold/30 animate-[spin_15s_linear_infinite_reverse]"></div>
+          <div class="absolute inset-16 rounded-full border-4 border-transparent border-l-vrt-gold/50 shadow-[0_0_40px_rgba(197,160,89,0.4)] animate-[spin_8s_linear_infinite]"></div>
           <div class="absolute inset-24 rounded-full bg-[#060a14] shadow-2xl border border-gray-800 z-10 flex items-center justify-center overflow-hidden">
             <img src="/images/Dourado-4.png" alt="Vrtice Logo" class="w-24 opacity-20" />
             
@@ -160,38 +161,62 @@
 
         <div class="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
           <!-- O Link Genérico -->
-          <div class="bg-[#0b0c0f] border border-gray-800 rounded-[3rem] p-8 flex flex-col items-center opacity-70 filter grayscale-[30%] hover:grayscale-0 transition-all duration-500 hover:border-red-900/50">
+          <div class="bg-[#0b0c0f] border border-gray-800 rounded-[3rem] p-8 flex flex-col items-center transition-all duration-500 relative" :class="genericState === 'failed' ? 'grayscale opacity-50' : ''">
             <div class="text-gray-500 font-bold tracking-widest uppercase text-xs mb-6 flex items-center gap-2">
               <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
               Link Genérico (O padrão que afasta clientes)
             </div>
             
             <!-- Simulador de UI Feia -->
-            <div class="w-full max-w-[280px] bg-gray-200 rounded-3xl p-6 flex flex-col items-center shadow-inner relative overflow-hidden">
+            <div class="w-full max-w-[280px] h-[340px] bg-gray-200 rounded-3xl p-6 flex flex-col items-center shadow-inner relative overflow-hidden transition-all duration-500">
               <div class="absolute inset-0 bg-black/5"></div>
-              <!-- Spinner de Loading Lento -->
-              <div class="absolute top-4 right-4 w-4 h-4 border-2 border-gray-400 border-t-transparent rounded-full animate-spin"></div>
               
-              <div class="w-20 h-20 bg-gray-400/50 rounded-full mb-4 animate-pulse"></div>
-              <div class="w-32 h-4 bg-gray-400/50 mb-2 rounded"></div>
-              <div class="w-24 h-3 bg-gray-400/30 mb-8 rounded"></div>
-              
-              <!-- Botões Feios -->
-              <div class="w-full space-y-3 relative z-10">
-                <div class="w-full h-12 bg-blue-600/80 rounded flex items-center justify-center text-white/50 text-xs font-bold">MEU WHATSAPP</div>
-                <div class="w-full h-12 bg-white border border-gray-400 rounded flex items-center justify-center text-gray-400 text-xs font-bold shadow-sm">MEU SITE</div>
-                <div class="w-full h-12 bg-purple-600/80 rounded flex items-center justify-center text-white/50 text-xs font-bold">COMPRAR MENTORIA</div>
+              <!-- State: Idle -->
+              <div v-if="genericState === 'idle'" class="w-full h-full flex flex-col items-center justify-start z-10 fade-enter">
+                <div class="w-20 h-20 bg-gray-400/50 rounded-full mb-4"></div>
+                <div class="w-32 h-4 bg-gray-400/50 mb-2 rounded"></div>
+                <div class="w-24 h-3 bg-gray-400/30 mb-8 rounded"></div>
+                <div class="w-full space-y-3 relative z-10">
+                  <div class="w-full h-12 bg-blue-600/80 rounded flex items-center justify-center text-white/50 text-xs font-bold relative overflow-hidden">
+                    <div class="absolute inset-0 bg-black/20 click-ripple opacity-0"></div>
+                    COMPRAR MENTORIA
+                  </div>
+                  <div class="w-full h-12 bg-white border border-gray-400 rounded flex items-center justify-center text-gray-400 text-xs font-bold shadow-sm">MEU WHATSAPP</div>
+                </div>
+                
+                <!-- Cursor de Mouse Animado -->
+                <svg class="w-6 h-6 text-gray-800 absolute cursor-move z-20" fill="currentColor" viewBox="0 0 24 24"><path d="M7 2l12 11.2-5.8.5 3.3 7.3-2.2 1-3.2-7.4-4.4 4.8z"></path></svg>
+              </div>
+
+              <!-- State: Loading -->
+              <div v-if="genericState === 'loading'" class="w-full h-full flex flex-col items-center justify-center z-10 fade-enter">
+                <div class="w-10 h-10 border-4 border-gray-400 border-t-gray-600 rounded-full animate-spin"></div>
+                <span class="text-gray-500 text-xs font-bold mt-4 uppercase tracking-widest">Carregando...</span>
+              </div>
+
+              <!-- State: Failed (BSOD) -->
+              <div v-if="genericState === 'failed'" class="w-full h-full flex flex-col items-start justify-start p-4 z-10 bg-blue-700 fade-enter overflow-hidden relative">
+                <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"></div>
+                <p class="text-white font-mono text-[10px] font-bold mb-2">:(</p>
+                <p class="text-white font-mono text-[8px] leading-tight mb-2">Seu cliente encontrou um problema e precisou ser reiniciado. Nós estamos coletando informações de erro, mas ele já foi para o concorrente.</p>
+                <p class="text-white font-mono text-[7px] opacity-70">100% concluído</p>
+                <div class="mt-auto text-[6px] text-white/50 font-mono">
+                  STOP Code: SLOW_GENERIC_LINK
+                </div>
               </div>
             </div>
-            <div class="mt-8 text-center text-sm text-gray-500 font-medium px-4">
-              "Carregando... O cliente já foi embora."
+
+            <div class="mt-8 text-center text-sm font-medium px-4 h-10" :class="genericState === 'failed' ? 'text-red-500' : 'text-gray-500'">
+              <span v-if="genericState === 'idle'">Aguardando o clique...</span>
+              <span v-if="genericState === 'loading'">"Que demora pra abrir..."</span>
+              <span v-if="genericState === 'failed'">Venda Perdida.</span>
             </div>
           </div>
 
           <!-- A Bio que Vende -->
           <div class="bg-gradient-to-br from-[#0a0f1c] to-[#04060a] border-2 border-vrt-gold/50 rounded-[3rem] p-8 flex flex-col items-center shadow-[0_0_80px_rgba(197,160,89,0.15)] transform scale-105 z-10 relative">
-            <div class="absolute -top-4 bg-vrt-gold text-black font-bold px-6 py-1 rounded-full text-xs uppercase tracking-widest shadow-lg animate-pulse">
-              A Escolha dos Especialistas
+            <div class="absolute -top-4 bg-vrt-gold text-black font-bold px-6 py-1 rounded-full text-xs uppercase tracking-widest shadow-lg animate-pulse" v-if="premiumState === 'success'">
+              Venda Realizada!
             </div>
             <div class="text-vrt-gold font-bold tracking-widest uppercase text-xs mb-6 mt-4 flex items-center gap-2">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
@@ -199,26 +224,71 @@
             </div>
             
             <!-- Simulador de UI Premium -->
-            <div class="w-full max-w-[280px] bg-[#0A1128] rounded-[2rem] p-6 flex flex-col items-center border border-gray-700 shadow-2xl relative overflow-hidden">
-              <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMSIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==')] opacity-[0.03]"></div>
+            <div class="w-full max-w-[280px] h-[340px] bg-[#0A1128] rounded-[2rem] flex flex-col items-center shadow-2xl relative overflow-hidden transition-all duration-300" :class="premiumState === 'success' ? 'bg-[#128C7E]' : 'p-6 border border-gray-700'">
               
-              <div class="w-20 h-20 bg-gradient-to-br from-vrt-gold to-yellow-600 rounded-full mb-4 p-[2px] shadow-[0_0_20px_rgba(197,160,89,0.3)]">
-                <div class="w-full h-full bg-[#0A1128] rounded-full flex items-center justify-center">
-                   <img src="/images/Dourado-4.png" class="w-10 h-10 opacity-90 drop-shadow-md" />
+              <!-- State: Idle -->
+              <div v-if="premiumState === 'idle'" class="w-full h-full flex flex-col items-center justify-start z-10 fade-enter">
+                <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMSIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==')] opacity-[0.03]"></div>
+                <div class="w-20 h-20 shrink-0 bg-gradient-to-br from-vrt-gold to-yellow-600 rounded-full mb-2 p-[2px] shadow-[0_0_20px_rgba(197,160,89,0.3)]">
+                  <div class="w-full h-full bg-[#0A1128] rounded-full flex items-center justify-center">
+                     <img src="/images/Dourado-4.png" class="w-10 h-10 opacity-90 drop-shadow-md" />
+                  </div>
                 </div>
+                <div class="text-white font-abhaya font-bold text-xl mb-1 drop-shadow-sm">Dra. Camila</div>
+                <div class="text-vrt-gold text-[10px] mb-4 uppercase tracking-widest">Especialista</div>
+                
+                <div class="w-full space-y-3 relative z-10">
+                  <div class="w-full py-3 px-4 bg-white/5 border border-white/10 rounded-2xl text-white text-sm text-center font-medium backdrop-blur-md">Serviços</div>
+                  <div class="w-full py-3 px-4 bg-gradient-to-r from-vrt-gold to-[#997637] text-[#0A1128] border border-vrt-gold/50 rounded-2xl text-sm text-center font-bold shadow-[0_0_15px_rgba(197,160,89,0.3)] relative overflow-hidden">
+                    <div class="absolute inset-0 bg-white/40 click-ripple opacity-0"></div>
+                    Falar no WhatsApp
+                  </div>
+                </div>
+                
+                <!-- Cursor de Mouse Animado -->
+                <svg class="w-6 h-6 text-white drop-shadow-lg absolute cursor-move-premium z-20" fill="currentColor" viewBox="0 0 24 24"><path d="M7 2l12 11.2-5.8.5 3.3 7.3-2.2 1-3.2-7.4-4.4 4.8z"></path></svg>
               </div>
-              <div class="text-white font-abhaya font-bold text-xl mb-1 drop-shadow-sm">Dra. Camila</div>
-              <div class="text-vrt-gold text-xs mb-6 uppercase tracking-widest">Especialista</div>
-              
-              <!-- Botões Premium -->
-              <div class="w-full space-y-3 relative z-10">
-                <div class="w-full py-3 px-4 bg-white/5 border border-white/10 rounded-2xl text-white text-sm text-center font-medium backdrop-blur-md hover:bg-white/10 transition-colors">Agendar Consulta</div>
-                <div class="w-full py-3 px-4 bg-white/5 border border-white/10 rounded-2xl text-white text-sm text-center font-medium backdrop-blur-md hover:bg-white/10 transition-colors">Ver Serviços</div>
-                <div class="w-full py-3 px-4 bg-gradient-to-r from-vrt-gold to-[#997637] text-[#0A1128] border border-vrt-gold/50 rounded-2xl text-sm text-center font-bold shadow-[0_0_15px_rgba(197,160,89,0.3)] hover:scale-105 transition-transform">Falar no WhatsApp</div>
+
+              <!-- State: Loading (Fast) -->
+              <div v-if="premiumState === 'loading'" class="w-full h-full bg-white flex items-center justify-center z-10 fade-enter">
+                 <div class="w-8 h-8 rounded-full bg-green-500 animate-ping"></div>
               </div>
+
+              <!-- State: Success (WhatsApp Screen) -->
+              <div v-if="premiumState === 'success'" class="w-full h-full bg-[#ECE5DD] flex flex-col z-10 relative fade-enter">
+                 <!-- WA Header -->
+                 <div class="bg-[#075E54] w-full h-12 flex items-center px-3 gap-2 shadow-md z-20">
+                    <div class="w-8 h-8 rounded-full bg-gray-300 overflow-hidden flex items-center justify-center"><img src="/images/Dourado-4.png" class="w-5 h-5"/></div>
+                    <div class="text-white">
+                      <div class="text-xs font-bold">Dra. Camila</div>
+                      <div class="text-[9px] opacity-80">online</div>
+                    </div>
+                 </div>
+                 <!-- Background texture -->
+                 <div class="absolute inset-0 bg-[url('https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg')] opacity-10 mix-blend-multiply z-10"></div>
+                 
+                 <div class="flex-1 p-3 flex flex-col justify-end z-20">
+                   <!-- Customer message bubble -->
+                   <div class="bg-[#DCF8C6] self-end rounded-lg rounded-tr-none p-2 shadow-sm max-w-[85%] relative mb-2 bubble-enter">
+                      <p class="text-[11px] text-gray-800 leading-tight">Olá, vi seu link e achei incrível! Quero agendar uma consulta.</p>
+                      <span class="text-[8px] text-gray-500 absolute bottom-1 right-1">10:42 ✓✓</span>
+                   </div>
+                 </div>
+                 <!-- WA Input bar -->
+                 <div class="bg-[#F0F0F0] h-10 w-full flex items-center px-2 gap-2 z-20">
+                    <div class="flex-1 bg-white rounded-full h-7 border border-gray-300"></div>
+                    <div class="w-7 h-7 bg-[#00897B] rounded-full flex items-center justify-center text-white">
+                      <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
+                    </div>
+                 </div>
+              </div>
+
             </div>
-            <div class="mt-8 text-center text-sm text-green-400 font-medium px-4">
-              "Uau! Essa pessoa sabe o que está fazendo. Me passa confiança!"
+            
+            <div class="mt-8 text-center text-sm font-medium px-4 h-10" :class="premiumState === 'success' ? 'text-green-400' : 'text-vrt-gold'">
+              <span v-if="premiumState === 'idle'">Aguardando o clique...</span>
+              <span v-if="premiumState === 'loading'">Processando...</span>
+              <span v-if="premiumState === 'success'">Dinheiro no bolso.</span>
             </div>
           </div>
         </div>
@@ -295,6 +365,9 @@ const sectionRef = ref(null)
 const isVisible = ref(false)
 let observer = null
 
+const genericState = ref('idle')
+const premiumState = ref('idle')
+
 const steps = [
   { id: 1, title: 'Análise de Dados', desc: 'Entendemos o que seu público realmente deseja.' },
   { id: 2, title: 'Design de Conversão', desc: 'Criamos uma experiência que direciona o visitante até a ação desejada.' },
@@ -330,6 +403,32 @@ const resetInterval = () => {
   }, 5000)
 }
 
+const runSimulationLoop = () => {
+  const loop = () => {
+    genericState.value = 'idle'
+    premiumState.value = 'idle'
+    
+    setTimeout(() => {
+      genericState.value = 'loading'
+      premiumState.value = 'loading'
+      
+      setTimeout(() => {
+        premiumState.value = 'success'
+        
+        setTimeout(() => {
+          genericState.value = 'failed'
+          
+          setTimeout(() => {
+            loop()
+          }, 3500)
+        }, 1500) // generic takes longer and fails
+      }, 500) // premium loads fast
+    }, 1500) // wait before clicking
+  }
+  
+  loop()
+}
+
 onMounted(() => {
   resetInterval()
   
@@ -337,10 +436,11 @@ onMounted(() => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         isVisible.value = true
+        runSimulationLoop()
         observer.unobserve(entry.target)
       }
     })
-  }, { threshold: 0.15 })
+  }, { threshold: 0.1 })
 
   if (sectionRef.value) {
     observer.observe(sectionRef.value)
@@ -356,12 +456,88 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-/* Transições da Roda */
+.glass-dark {
+  background: rgba(15, 20, 35, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-100 { transition-delay: 100ms; }
+.reveal-delay-200 { transition-delay: 200ms; }
+.reveal-delay-300 { transition-delay: 300ms; }
+.reveal-delay-400 { transition-delay: 400ms; }
+
+.fade-enter {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.bubble-enter {
+  animation: bubblePop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+@keyframes bubblePop {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.cursor-move {
+  animation: moveCursor 4.5s infinite;
+}
+
+@keyframes moveCursor {
+  0% { transform: translate(60px, 120px); opacity: 0;}
+  10% { transform: translate(60px, 120px); opacity: 1;}
+  25% { transform: translate(0px, 20px); opacity: 1;}
+  28% { transform: translate(0px, 20px) scale(0.9); }
+  31% { transform: translate(0px, 20px) scale(1); }
+  100% { transform: translate(0px, 20px); opacity: 0; }
+}
+
+.cursor-move-premium {
+  animation: moveCursorPremium 4.5s infinite; 
+}
+
+@keyframes moveCursorPremium {
+  0% { transform: translate(60px, 120px); opacity: 0;}
+  10% { transform: translate(60px, 120px); opacity: 1;}
+  25% { transform: translate(0px, 75px); opacity: 1;}
+  28% { transform: translate(0px, 75px) scale(0.9); } 
+  31% { transform: translate(0px, 75px) scale(1); }
+  100% { transform: translate(0px, 75px); opacity: 0; }
+}
+
+.click-ripple {
+  animation: ripple 4.5s infinite;
+}
+
+@keyframes ripple {
+  0%, 25% { opacity: 0; transform: scale(1); }
+  28% { opacity: 1; transform: scale(1); }
+  32% { opacity: 0; transform: scale(1.1); }
+  100% { opacity: 0; transform: scale(1); }
+}
+
 .cubic-bezier {
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-/* Slide Fade para os Cards da Direita */
 .slide-fade-enter-active {
   transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }

@@ -11,11 +11,11 @@
       <!-- Cabeçalho da Oferta -->
       <div class="text-center mb-16 transition-all duration-1000 transform" :class="{ 'translate-y-0 opacity-100': isVisible, 'translate-y-10 opacity-0': !isVisible }">
         <h2 class="text-4xl md:text-5xl lg:text-[4rem] font-abhaya font-extrabold text-white mb-6 drop-shadow-2xl leading-tight">
-          A Oferta <br class="hidden md:block"/>
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F2D492] via-vrt-gold to-yellow-600">Irrecusável</span>
+          Sua Passagem Direta Para a <br class="hidden md:block"/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#F2D492] via-vrt-gold to-yellow-600">Autoridade Absoluta</span>
         </h2>
         <p class="text-2xl text-gray-300 font-light">
-          Tudo o que você precisa por apenas <strong class="text-vrt-gold font-bold text-3xl">R$ 50</strong>
+          O mercado pune os amadores. Junte-se aos especialistas por apenas <strong class="text-vrt-gold font-bold text-3xl">R$ 50</strong>
         </p>
       </div>
       
@@ -70,6 +70,21 @@
               </li>
             </ul>
             
+            <!-- Caixa de Custos Eliminados -->
+            <div class="bg-red-900/10 border border-red-500/20 p-6 rounded-2xl mb-8 mt-12 relative overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-r from-red-900/20 to-transparent pointer-events-none"></div>
+              <h4 class="text-white font-bold mb-4 flex items-center gap-2 text-sm uppercase tracking-wider relative z-10">
+                <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                Dores de Cabeça que Você NUNCA Terá:
+              </h4>
+              <ul class="space-y-3 text-gray-300 text-sm font-medium relative z-10">
+                <li class="flex items-center gap-2"><span class="text-red-500 font-bold text-lg">✕</span> Pagar por Hospedagem de sites</li>
+                <li class="flex items-center gap-2"><span class="text-red-500 font-bold text-lg">✕</span> Comprar Domínio Anual</li>
+                <li class="flex items-center gap-2"><span class="text-red-500 font-bold text-lg">✕</span> Mensalidades abusivas de plataformas</li>
+                <li class="flex items-center gap-2"><span class="text-red-500 font-bold text-lg">✕</span> Perder clientes por passar uma imagem amadora</li>
+              </ul>
+            </div>
+
             <!-- Caixa de Bônus Destacada -->
             <div class="bg-gradient-to-br from-[#0f1524] to-[#060a14] p-8 mt-8 rounded-3xl border border-vrt-gold/30 shadow-[0_10px_30px_rgba(0,0,0,0.5)] relative group">
               <!-- Efeito Hover no Bônus -->
@@ -77,25 +92,24 @@
               
               <div class="absolute -top-4 left-8 bg-[#0a0f1c] px-4 py-1 text-vrt-gold font-bold tracking-widest uppercase text-[10px] sm:text-xs rounded-full border border-vrt-gold/40 flex items-center gap-2 shadow-md">
                 <svg class="w-3 h-3 animate-bounce" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 5a3 3 0 015-2.236A3 3 0 0114.83 6H16a2 2 0 110 4h-5V9a1 1 0 10-2 0v1H4a2 2 0 110-4h1.17C5.06 5.687 5 5.35 5 5zm4 1V5a1 1 0 10-1 1h1zm3 0a1 1 0 10-1-1v1h1z" clip-rule="evenodd"></path><path d="M9 11H3v5a2 2 0 002 2h4v-7zM11 18h4a2 2 0 002-2v-5h-6v7z"></path></svg>
-                Bônus Exclusivos (OFERTA HOJE)
+                Bônus Exclusivo
               </div>
               
-              <ul class="space-y-6 mt-6">
                 <li class="flex items-start">
                   <div class="text-3xl mr-4 drop-shadow-md">📊</div>
                   <div>
                     <strong class="text-white text-lg block mb-1 font-abhaya">PDF de Análise de Perfil (Guia de Marketing)</strong>
                     <div class="text-red-400 text-xs font-bold uppercase tracking-wide mb-1">Valor Real: <span class="line-through">R$ 200,00</span></div>
-                    <p class="text-gray-400 font-light text-sm leading-relaxed">Nós te diremos exatamente o que escrever na sua Bio, destaques e posts fixados para turbinar o seu perfil.</p>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed">Nós te diremos exatamente o que escrever na sua Bio, destaques e posts fixados para turbinar o seu perfil. Um mapa completo para as redes sociais.</p>
                   </div>
                 </li>
                 
                 <li class="flex items-start">
                   <div class="text-3xl mr-4 drop-shadow-md">🎥</div>
                   <div>
-                    <strong class="text-white text-lg block mb-1 font-abhaya">Acesso a Webinar com Estratégias Avançadas</strong>
-                    <div class="text-red-400 text-xs font-bold uppercase tracking-wide mb-1">Valor Real: <span class="line-through">R$ 150,00</span></div>
-                    <p class="text-gray-400 font-light text-sm leading-relaxed">Estratégias fechadas para potencializar sua conversão online.</p>
+                    <strong class="text-white text-lg block mb-1 font-abhaya">Acesso: Webinar "Os Segredos da Conversão"</strong>
+                    <div class="text-red-400 text-xs font-bold uppercase tracking-wide mb-1">Valor Real: <span class="line-through">R$ 297,00</span></div>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed">Um treinamento exclusivo para os assinantes, revelando os bastidores de como estruturamos páginas que faturam milhões.</p>
                   </div>
                 </li>
               </ul>
@@ -113,24 +127,32 @@
             <div class="w-full bg-[#0a0f1c] p-6 rounded-2xl border border-gray-800 mb-8 shadow-inner">
               <h4 class="text-gray-300 font-bold mb-4 text-xs uppercase tracking-wider flex items-center gap-2">
                 <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                O valor que você está levando hoje:
+                O que você estaria pagando lá fora:
               </h4>
               <div class="space-y-3 mb-4">
                 <div class="flex justify-between text-gray-500 text-sm">
-                  <span>Construção & Design:</span>
-                  <span>R$ 500,00</span>
+                  <span>Mão de Obra (Programador):</span>
+                  <span>R$ 1.500,00</span>
                 </div>
                 <div class="flex justify-between text-gray-500 text-sm">
-                  <span>Total de Bônus:</span>
-                  <span>R$ 350,00</span>
+                  <span>Hospedagem + Domínio:</span>
+                  <span>R$ 450,00</span>
+                </div>
+                <div class="flex justify-between text-gray-500 text-sm">
+                  <span>PDF Guia de Marketing:</span>
+                  <span>R$ 200,00</span>
+                </div>
+                <div class="flex justify-between text-gray-500 text-sm">
+                  <span>Webinar Exclusivo:</span>
+                  <span>R$ 297,00</span>
                 </div>
               </div>
               
               <div class="w-full h-px bg-gray-800/80 my-3"></div>
               
               <div class="flex justify-between text-gray-400 font-semibold text-sm">
-                <span>Valor Total do Serviço + Bônus:</span>
-                <span class="text-gray-600 line-through">R$ 850,00</span>
+                <span>Custo Real do Mercado:</span>
+                <span class="text-gray-600 line-through">R$ 2.447,00</span>
               </div>
             </div>
             
