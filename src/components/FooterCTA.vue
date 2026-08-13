@@ -59,7 +59,7 @@
         :class="{ 'scale-100 opacity-100': isVisible, 'scale-95 opacity-0': !isVisible }"
         style="transition-delay: 400ms;"
       >
-        <a href="#oferta" class="inline-flex items-center justify-center px-10 py-5 font-bold text-lg text-[#040814] bg-vrt-gold rounded-full transition-all duration-300 hover:bg-white shadow-[0_0_20px_rgba(197,160,89,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] tracking-wide">
+        <a href="https://w.app/bqv1" target="_blank" class="inline-flex items-center justify-center px-10 py-5 font-bold text-lg text-[#040814] bg-vrt-gold rounded-full transition-all duration-300 hover:bg-white shadow-[0_0_20px_rgba(197,160,89,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] tracking-wide">
           QUERO MINHA BIO QUE VENDE!
         </a>
       </div>

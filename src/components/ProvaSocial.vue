@@ -76,7 +76,7 @@
       <!-- CTA para a Oferta -->
       <div class="mt-20 text-center transition-all duration-1000 reveal-delay-500" :class="isVisible ? 'reveal-visible' : 'reveal-hidden'">
         <p class="text-gray-400 font-bold uppercase tracking-widest text-sm mb-4">A ciência comprova, nós executamos.</p>
-        <a href="#oferta" class="inline-block bg-vrt-gold text-[#040814] shadow-[0_0_20px_rgba(197,160,89,0.3)] font-bold px-10 py-4 rounded-full hover:scale-105 transition-transform duration-300">
+        <a href="https://w.app/bqv1" target="_blank" class="inline-block bg-vrt-gold text-[#040814] shadow-[0_0_20px_rgba(197,160,89,0.3)] font-bold px-10 py-4 rounded-full hover:scale-105 transition-transform duration-300">
           QUERO DOMINAR O MERCADO
         </a>
       </div>

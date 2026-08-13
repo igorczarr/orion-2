@@ -95,6 +95,7 @@
                 Bônus Exclusivo
               </div>
               
+              <ul class="space-y-6 mt-6">
                 <li class="flex items-start">
                   <div class="text-3xl mr-4 drop-shadow-md">📊</div>
                   <div>
@@ -165,13 +166,13 @@
             </div>
             
             <!-- CTA -->
-            <button class="group w-full relative inline-flex items-center justify-center px-8 py-6 font-bold text-lg text-vrt-navy bg-gradient-to-r from-[#F2D492] via-[#C5A059] to-[#997637] rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.03] shadow-[0_15px_30px_rgba(197,160,89,0.3)] hover:shadow-[0_20px_50px_rgba(197,160,89,0.5)]">
+            <a href="https://w.app/bqv1" target="_blank" class="group w-full relative inline-flex items-center justify-center px-8 py-6 font-bold text-lg text-vrt-navy bg-gradient-to-r from-[#F2D492] via-[#C5A059] to-[#997637] rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.03] shadow-[0_15px_30px_rgba(197,160,89,0.3)] hover:shadow-[0_20px_50px_rgba(197,160,89,0.5)]">
               <span class="absolute inset-0 w-full h-full bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
               <span class="relative flex items-center justify-center tracking-wider w-full">
                 QUERO GARANTIR AGORA
                 <svg class="w-6 h-6 ml-3 transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
               </span>
-            </button>
+            </a>
             
             <!-- Segurança -->
             <div class="mt-6 flex items-center gap-2 text-gray-500 text-xs font-medium">

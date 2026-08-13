@@ -50,7 +50,7 @@
 
       <!-- Call to Action -->
       <div v-if="showButton" class="mt-16 relative z-20 transition-all duration-1000 reveal-delay-500" :class="isVisible ? 'reveal-visible' : 'reveal-hidden'">
-        <a href="#oferta" class="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-base md:text-lg text-[#040814] rounded-full overflow-hidden transition-all duration-500 hover:scale-[1.02]">
+        <a href="https://w.app/bqv1" target="_blank" class="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-base md:text-lg text-[#040814] rounded-full overflow-hidden transition-all duration-500 hover:scale-[1.02]">
           <!-- Button Background -->
           <div class="absolute inset-0 w-full h-full bg-gradient-to-b from-[#F2D492] via-[#C5A059] to-[#997637] transition-all duration-500 group-hover:scale-110"></div>
           <!-- Inner Shadow -->

@@ -85,12 +85,12 @@
               <!-- Resultados da Enquete -->
               <div class="space-y-4" v-else>
                 <div class="relative w-full bg-black/40 rounded-xl overflow-hidden h-12 flex items-center px-4 border border-vrt-gold/30">
-                  <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-vrt-gold to-yellow-600 transition-all duration-1000" :style="{ width: yesPercent + '%' }"></div>
+                  <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-vrt-gold to-yellow-600 transition-all duration-1500 ease-out" :style="{ width: animatedYesPercent + '%' }"></div>
                   <span class="relative z-10 text-white font-bold text-sm">Sim, com certeza</span>
                   <span class="relative z-10 text-white font-bold text-sm ml-auto">{{ Math.round(yesPercent) }}% ({{ displayYesVotes }} votos)</span>
                 </div>
                 <div class="relative w-full bg-black/40 rounded-xl overflow-hidden h-12 flex items-center px-4 border border-gray-800">
-                  <div class="absolute top-0 left-0 h-full bg-white/10 transition-all duration-1000" :style="{ width: noPercent + '%' }"></div>
+                  <div class="absolute top-0 left-0 h-full bg-white/10 transition-all duration-1500 ease-out" :style="{ width: animatedNoPercent + '%' }"></div>
                   <span class="relative z-10 text-gray-400 font-medium text-sm">Não sofro com isso</span>
                   <span class="relative z-10 text-gray-400 font-medium text-sm ml-auto">{{ Math.round(noPercent) }}% ({{ displayNoVotes }} votos)</span>
                 </div>
@@ -118,6 +118,9 @@ const glassContainer = ref(null)
 const glassProgress = ref(0) // Vai de 0 a 1
 const pollAnswered = ref(false)
 
+const animatedYesPercent = ref(0)
+const animatedNoPercent = ref(0)
+
 const yesVotes = ref(0)
 const noVotes = ref(0)
 const displayYesVotes = ref(0)
@@ -135,7 +138,7 @@ const noPercent = computed(() => {
 
 const fetchVotes = async () => {
   try {
-    const res = await fetch('http://localhost:3001/api/votes')
+    const res = await fetch('https://orion-2-backend.onrender.com')
     const data = await res.json()
     yesVotes.value = data.yes
     noVotes.value = data.no
@@ -157,6 +160,11 @@ const answerPoll = async (answer) => {
   animateValue(displayYesVotes, 0, yesVotes.value, 1500)
   animateValue(displayNoVotes, 0, noVotes.value, 1500)
   
+  setTimeout(() => {
+    animatedYesPercent.value = yesPercent.value
+    animatedNoPercent.value = noPercent.value
+  }, 50)
+  
   try {
     const res = await fetch('http://localhost:3001/api/votes', {
       method: 'POST',
@@ -173,6 +181,8 @@ const answerPoll = async (answer) => {
     setTimeout(() => {
       if (displayYesVotes.value !== yesVotes.value) animateValue(displayYesVotes, displayYesVotes.value, yesVotes.value, 500)
       if (displayNoVotes.value !== noVotes.value) animateValue(displayNoVotes, displayNoVotes.value, noVotes.value, 500)
+      animatedYesPercent.value = yesPercent.value
+      animatedNoPercent.value = noPercent.value
     }, 1500)
 
   } catch (e) {

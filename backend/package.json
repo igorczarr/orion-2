@@ -1,6 +1,7 @@
 {
   "name": "orion-2-backend",
   "version": "1.0.0",
+  "type": "module",
   "description": "Backend para Enquete da Bio que Vende",
   "main": "server.js",
   "scripts": {

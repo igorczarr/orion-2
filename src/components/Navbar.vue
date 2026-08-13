@@ -29,7 +29,7 @@
       </div>
 
       <!-- CTA -->
-      <a href="#oferta" class="shrink-0 inline-flex items-center justify-center px-4 py-2 text-[10px] md:text-sm font-bold text-[#040814] bg-vrt-gold rounded-full transition-all duration-300 hover:scale-105 shadow-[0_0_15px_rgba(197,160,89,0.3)]">
+      <a href="https://w.app/bqv1" target="_blank" class="shrink-0 inline-flex items-center justify-center px-4 py-2 text-[10px] md:text-sm font-bold text-[#040814] bg-vrt-gold rounded-full transition-all duration-300 hover:scale-105 shadow-[0_0_15px_rgba(197,160,89,0.3)]">
         GARANTIR OFERTA
         </a>
       </div>

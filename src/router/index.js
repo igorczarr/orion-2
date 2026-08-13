@@ -10,6 +10,11 @@ const routes = [
     path: '/vsl',
     name: 'VSLPage',
     component: () => import('../views/VSLPage.vue')
+  },
+  {
+    path: '/obrigado',
+    name: 'Obrigado',
+    component: () => import('../views/Obrigado.vue')
   }
 ]
 
